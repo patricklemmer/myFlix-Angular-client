@@ -1,11 +1,13 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
-// This import to closes the dialog on success
-import { MatDialogRef } from '@angular/material/dialog';
-
+// Service imports
 // This import brings in the API calls
 import { FetchApiDataService } from '../fetch-api-data.service';
 
+// Angular Material imports
+// This import to closes the dialog on success
+import { MatDialogRef } from '@angular/material/dialog';
 // This import is used to display notifications back to the user
 import { MatSnackBar } from '@angular/material/snack-bar';
 
@@ -20,7 +22,8 @@ export class UserLoginFormComponent implements OnInit {
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserLoginFormComponent>,
-    public snackBar: MatSnackBar
+    public snackBar: MatSnackBar,
+    private router: Router
   ) {}
 
   ngOnInit(): void {}
@@ -39,6 +42,8 @@ export class UserLoginFormComponent implements OnInit {
         this.snackBar.open(result, 'OK', {
           duration: 2000,
         });
+        // If login successful, navigate to route 'movies'
+        this.router.navigate(['movies']);
       },
       (result) => {
         console.log(result);
