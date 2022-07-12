@@ -1,0 +1,35 @@
+$backgroundColor: #faf9f8;
+$cardColor: #fff;
+$textColor: #343a40;
+$boxShadowColor: #e9ecef;
+
+.welcome-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 40px;
+  background-color: $backgroundColor;
+}
+
+.welcome-card {
+  margin-top: 50px;
+  display: flex;
+  padding: 30px;
+  flex-direction: column;
+  box-shadow: 10px 5px 5px $boxShadowColor;
+  background-color: $cardColor;
+}
+
+.welcome-card-header {
+  margin-bottom: 20px;
+  color: $textColor;
+  display: flex;
+  justify-content: center;
+}
+
+.mat-card > .mat-card-actions:last-child {
+  margin-bottom: -8px;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
