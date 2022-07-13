@@ -21,6 +21,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class MovieCardComponent implements OnInit {
   // Movies variable gets declared as an array. This is where movies returned from API will be kept.
   movies: any[] = [];
+  favouriteMovies: any[] = [];
 
   constructor(
     public fetchApiData: FetchApiDataService,
@@ -31,8 +32,14 @@ export class MovieCardComponent implements OnInit {
   ngOnInit(): void {
     // Function below is called
     this.getMovies();
+    this.getFavouriteMovies();
   }
-  //  Function fetches movies from FetchApiDataService service with help of getAllMovies()
+
+  /**
+   * Gets movies from API call and sets movies state to return JSON file
+   * @returns array holding movies objects
+   * @function getAllMovies
+   */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -41,6 +48,60 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Gets favourite movies from API call and sets favourite movies variable to return JSON file
+   * @returns array holding id's of user's favourite movies
+   * @function getFavouriteMovies
+   */
+  getFavouriteMovies(): void {
+    this.fetchApiData.getFavouriteMovies().subscribe((resp: any) => {
+      this.favouriteMovies = resp;
+      console.log(this.favouriteMovies);
+      return this.favouriteMovies;
+    });
+  }
+
+  /**
+   * Checks if a movie is included in the user's list of favourite movies
+   * @param id
+   * @returns true, if the movie is a favourite move, else false
+   */
+  isFav(id: string): boolean {
+    return this.favouriteMovies.includes(id);
+  }
+
+  /**
+   * Adds a movie to the list of favorite movies via API call
+   * @param id
+   * @function addFavouriteMovie
+   */
+  addToFavouriteMovies(id: string): void {
+    console.log(id);
+    this.fetchApiData.addFavouriteMovie(id).subscribe((result) => {
+      console.log(result);
+      this.ngOnInit();
+    });
+  }
+
+  /**
+   * Removes a movie from the list of favorite movies via API call
+   * @param id
+   * @function removeFavouriteMovie
+   */
+  removeFromFavouriteMovies(id: string): void {
+    console.log(id);
+    this.fetchApiData.removeFavouriteMovie(id).subscribe((result) => {
+      console.log(result);
+      this.ngOnInit();
+    });
+  }
+
+  /**
+   * Opens director dialog from DirectorComponent to display director details
+   * @param name
+   * @param bio
+   * @param birth
+   */
   openDirectorDialog(name: string, bio: string, birth: Date): void {
     this.dialog.open(DirectorComponent, {
       data: {
@@ -53,6 +114,11 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Opens genre dialog from GenreComponent to display genre details
+   * @param name
+   * @param description
+   */
   openGenreDialog(name: string, description: string): void {
     this.dialog.open(GenreComponent, {
       data: {
@@ -64,6 +130,11 @@ export class MovieCardComponent implements OnInit {
     });
   }
 
+  /**
+   * Opens description dialog from DescriptionComponent to display description details
+   * @param title
+   * @param description
+   */
   openDescriptionDialog(title: string, description: string): void {
     this.dialog.open(DescriptionComponent, {
       data: {
