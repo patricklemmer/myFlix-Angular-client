@@ -14,6 +14,8 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { EditUserProfileComponent } from './edit-user-profile/edit-user-profile.component';
+import { DirectorComponent } from './director/director.component';
 
 // Angular Material imports
 import { MatInputModule } from '@angular/material/input';
@@ -41,6 +43,8 @@ const appRoutes: Routes = [
     WelcomePageComponent,
     UserProfileComponent,
     NavbarComponent,
+    EditUserProfileComponent,
+    DirectorComponent,
   ],
   imports: [
     BrowserModule,
