@@ -27,6 +27,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { DescriptionComponent } from './description/description.component';
 
 const appRoutes: Routes = [
   { path: 'welcome', component: WelcomePageComponent },
@@ -47,6 +48,7 @@ const appRoutes: Routes = [
     EditUserProfileComponent,
     DirectorComponent,
     GenreComponent,
+    DescriptionComponent,
   ],
   imports: [
     BrowserModule,

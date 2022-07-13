@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
 // Component imports
 import { DirectorComponent } from '../director/director.component';
 import { GenreComponent } from '../genre/genre.component';
+import { DescriptionComponent } from '../description/description.component';
 
 // Data imports
 import { FetchApiDataService } from '../fetch-api-data.service';
@@ -56,6 +57,17 @@ export class MovieCardComponent implements OnInit {
     this.dialog.open(GenreComponent, {
       data: {
         Name: name,
+        Description: description,
+      },
+      // Assign dialog width
+      width: '500px',
+    });
+  }
+
+  openDescriptionDialog(title: string, description: string): void {
+    this.dialog.open(DescriptionComponent, {
+      data: {
+        Title: title,
         Description: description,
       },
       // Assign dialog width
