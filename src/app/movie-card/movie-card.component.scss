@@ -8,7 +8,7 @@ $boxShadowColor: #e9ecef;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 50px 0;
+  padding: 50px;
   background-color: $backgroundColor;
 }
 
@@ -18,10 +18,10 @@ $boxShadowColor: #e9ecef;
   justify-content: center;
   align-items: center;
   position: relative;
-  box-shadow: 10px 5px 5px $boxShadowColor;
+  box-shadow: 7px 4px 4px $boxShadowColor;
   background-color: $cardColor;
-  max-width: 280px;
-  width: 280px;
+  max-width: 300px;
+  width: 300px;
   margin: 15px;
   padding: 20px 3px;
 }

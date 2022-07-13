@@ -219,7 +219,7 @@ export class FetchApiDataService {
   }
 
   /**
-   * extracts response data from HTTP response
+   * Extracts response data from HTTP response
    * @param res
    * @returns response body or empty object
    */
@@ -229,7 +229,7 @@ export class FetchApiDataService {
   }
 
   /**
-   * error handling
+   * Error handling
    * @param error
    * @returns error message
    */
@@ -241,6 +241,6 @@ export class FetchApiDataService {
         `Error Status code ${error.status}, ` + `Error Body is: ${error.error}`
       );
     }
-    return throwError('Something went wrong. Please try again later.');
+    return throwError('Something bad happened; please try again later.');
   }
 }

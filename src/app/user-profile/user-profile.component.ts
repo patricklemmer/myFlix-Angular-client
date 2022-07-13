@@ -31,7 +31,7 @@ export class UserProfileComponent implements OnInit {
   }
 
   /**
-   * Gets user data from API call, sets the user var to returned JSON file
+   * Gets user data from API call, sets the user variable to returned JSON file
    * @returns object holding user information
    * @function getUser
    */
