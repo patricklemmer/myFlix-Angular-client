@@ -1,5 +1,15 @@
+// Angular imports
 import { Component, OnInit } from '@angular/core';
+
+// Component imports
+import { DirectorComponent } from '../director/director.component';
+
+// Data imports
 import { FetchApiDataService } from '../fetch-api-data.service';
+
+// Angular Material imports
+import { MatDialog } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-movie-card',
@@ -10,7 +20,11 @@ export class MovieCardComponent implements OnInit {
   // Movies variable gets declared as an array. This is where movies returned from API will be kept.
   movies: any[] = [];
 
-  constructor(public fetchApiData: FetchApiDataService) {}
+  constructor(
+    public fetchApiData: FetchApiDataService,
+    public dialog: MatDialog,
+    public snackBar: MatSnackBar
+  ) {}
 
   ngOnInit(): void {
     // Function below is called
@@ -22,6 +36,18 @@ export class MovieCardComponent implements OnInit {
       this.movies = resp;
       console.log(this.movies);
       return this.movies;
+    });
+  }
+
+  openDirectorDialog(name: string, bio: string, birth: Date): void {
+    this.dialog.open(DirectorComponent, {
+      data: {
+        Name: name,
+        Bio: bio,
+        Birth: birth,
+      },
+      // Assign dialog width
+      width: '500px',
     });
   }
 }
