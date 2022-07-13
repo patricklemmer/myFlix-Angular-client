@@ -1,4 +1,4 @@
-// Module imports
+// Angular imports
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -16,6 +16,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { EditUserProfileComponent } from './edit-user-profile/edit-user-profile.component';
 import { DirectorComponent } from './director/director.component';
+import { GenreComponent } from './genre/genre.component';
 
 // Angular Material imports
 import { MatInputModule } from '@angular/material/input';
@@ -45,6 +46,7 @@ const appRoutes: Routes = [
     NavbarComponent,
     EditUserProfileComponent,
     DirectorComponent,
+    GenreComponent,
   ],
   imports: [
     BrowserModule,
