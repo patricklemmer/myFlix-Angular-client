@@ -30,7 +30,6 @@ export class MovieCardComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // Function below is called
     this.getMovies();
     this.getFavouriteMovies();
   }
@@ -63,8 +62,8 @@ export class MovieCardComponent implements OnInit {
 
   /**
    * Checks if a movie is included in the user's list of favourite movies
-   * @param id
-   * @returns true, if the movie is a favourite move, else false
+   * @param {string} id
+   * @returns true, if the movie is a favourite movie, else false
    */
   isFav(id: string): boolean {
     return this.favouriteMovies.includes(id);
@@ -72,7 +71,7 @@ export class MovieCardComponent implements OnInit {
 
   /**
    * Adds a movie to the list of favorite movies via API call
-   * @param id
+   * @param {string} id
    * @function addFavouriteMovie
    */
   addToFavouriteMovies(id: string): void {
@@ -85,7 +84,7 @@ export class MovieCardComponent implements OnInit {
 
   /**
    * Removes a movie from the list of favorite movies via API call
-   * @param id
+   * @param {string} id
    * @function removeFavouriteMovie
    */
   removeFromFavouriteMovies(id: string): void {
@@ -98,9 +97,9 @@ export class MovieCardComponent implements OnInit {
 
   /**
    * Opens director dialog from DirectorComponent to display director details
-   * @param name
-   * @param bio
-   * @param birth
+   * @param {string} name
+   * @param {string} bio
+   * @param {date} birth
    */
   openDirectorDialog(name: string, bio: string, birth: Date): void {
     this.dialog.open(DirectorComponent, {
@@ -116,8 +115,8 @@ export class MovieCardComponent implements OnInit {
 
   /**
    * Opens genre dialog from GenreComponent to display genre details
-   * @param name
-   * @param description
+   * @param {string} name
+   * @param {string} description
    */
   openGenreDialog(name: string, description: string): void {
     this.dialog.open(GenreComponent, {
@@ -132,8 +131,8 @@ export class MovieCardComponent implements OnInit {
 
   /**
    * Opens description dialog from DescriptionComponent to display description details
-   * @param title
-   * @param description
+   * @param {string} title
+   * @param {string} description
    */
   openDescriptionDialog(title: string, description: string): void {
     this.dialog.open(DescriptionComponent, {

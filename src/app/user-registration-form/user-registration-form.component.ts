@@ -1,12 +1,11 @@
+// Angular imports
 import { Component, OnInit, Input } from '@angular/core';
 
-// This import to closes the dialog on success
-import { MatDialogRef } from '@angular/material/dialog';
-
-// This import brings in the API calls
+// Data imports
 import { FetchApiDataService } from '../fetch-api-data.service';
 
-// This import is used to display notifications back to the user
+// Angular Material imports
+import { MatDialogRef } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -25,7 +24,9 @@ export class UserRegistrationFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // Function responsible for sending the form inputs to the backend
+  /**
+   * Function sends user input in registration form to database via fetchApiData service
+   */
   registerUser(): void {
     this.fetchApiData.userRegistration(this.userData).subscribe(
       (result) => {

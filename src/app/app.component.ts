@@ -1,3 +1,4 @@
+//Angular imports
 import { Component } from '@angular/core';
 
 @Component({
@@ -5,6 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
+
+/**
+ * Root class
+ */
 export class AppComponent {
   title = 'myFlix-Angular-client';
 }

@@ -1,3 +1,4 @@
+// Angular imports
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -43,6 +44,9 @@ export class UserProfileComponent implements OnInit {
     });
   }
 
+  /**
+   * Opens the edit profile dialog from EditUserProfileComponent
+   */
   openEditProfileDialog(): void {
     this.dialog.open(EditUserProfileComponent, {
       width: '350px',

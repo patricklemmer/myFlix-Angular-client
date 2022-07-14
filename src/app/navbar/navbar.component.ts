@@ -1,3 +1,4 @@
+// Angular imports
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -26,7 +27,7 @@ export class NavbarComponent implements OnInit {
   }
 
   /**
-   * Logs out user, clears localStorage to reset token and usr
+   * Logs out user, clears localStorage to reset token and user
    */
   logOut(): void {
     localStorage.clear();

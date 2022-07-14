@@ -1,16 +1,13 @@
+// Angular imports
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
-// Service imports
-// This import brings in the API calls
+// Data imports
 import { FetchApiDataService } from '../fetch-api-data.service';
 
 // Angular Material imports
-// This import to closes the dialog on success
 import { MatDialogRef } from '@angular/material/dialog';
-// This import is used to display notifications back to the user
 import { MatSnackBar } from '@angular/material/snack-bar';
-
 @Component({
   selector: 'app-user-login-form',
   templateUrl: './user-login-form.component.html',
@@ -28,7 +25,9 @@ export class UserLoginFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // Function responsible for sending the form inputs to the backend
+  /**
+   * Function sends user input in login form to database via fetchApiData service
+   */
   loginUser(): void {
     this.fetchApiData.userLogin(this.userData).subscribe(
       (result) => {
