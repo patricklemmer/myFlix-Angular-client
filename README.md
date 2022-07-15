@@ -56,9 +56,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<p>The objective of this project is...<br><br>...to build the client-side for an application called myFlix based on
+The objective of this project is...<br><br>...to build the client-side for an application called myFlix based on
 its existing server-side code (REST API and database), with supporting
-documentation and using Angular.</p> 
+documentation and using Angular.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -117,7 +117,12 @@ can learn more about movies I’ve watched or am interested in.
 <!-- Documentation -->
 ## Documentation
 
-<p> This app contains extensive documentation created by Compodoc. To view the docs in a browser, clone this repo and run `npm run compodoc`. </p>
+This app contains extensive documentation created by Compodoc. To view the docs in a browser, clone this repo and run npm run compodoc.
+````
+git clone https://github.com/patricklemmer/myFlix-Angular-client
+npm run compodoc
+````
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
