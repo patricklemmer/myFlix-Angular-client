@@ -11,10 +11,6 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center">
-  <a href="https://github.com/patricklemmer/myFlix-Angular-client">
-    <img src="https://github.com/patricklemmer/assets/blob/main/readme_icon.png" alt="Logo" width="80" height="80">
-  </a>
 
 <h3 align="center">myFlix-Angular-client</h3>
 
@@ -44,7 +40,6 @@
     <li><a href="#user-stories">User stories</a></li>
     <li><a href="#technical-requirements">Technical requirements</a></li>
     <li><a href="#documentation">Documentation</a></li>
-    <li><a href="#contributors">Contributors</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -126,17 +121,6 @@ npm run compodoc
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-<!-- CONTRIBUTORS -->
-## Contributors
-
-<table><tr><td align="center"><a href="https://patricklemmer.dev"><img src="https://github.com/patricklemmer/assets/blob/main/profile_image.png" width="100px;" alt="Patrick Lemmer"/><br /><sub><b>Patrick Lemmer</b></sub></a><br /><a href="https://github.com/patricklemmer/js_app/commits/master" title="Code">💻</a></td></tr>
-</table>
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
 
 <!-- CONTRIBUTING -->
 ## Contributing
