@@ -109,6 +109,31 @@ can learn more about movies I’ve watched or am interested in.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+<!-- Project setup -->
+## How to run this project
+
+1. Install the Angular CLI globally
+``
+npm install --global @angular/cli
+``
+
+2. Clone the repository 
+````
+git clone https://github.com/patricklemmer/myFlix-Angular-client.git
+````
+
+3. Install all dependencies
+``
+npm install
+``
+
+4. Run the app on localhost:4200
+``
+ng serve
+``
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- Documentation -->
 ## Documentation
 
