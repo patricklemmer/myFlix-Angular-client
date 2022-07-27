@@ -39,6 +39,7 @@
     <li><a href="#key-features">Key Features</a></li>
     <li><a href="#user-stories">User stories</a></li>
     <li><a href="#technical-requirements">Technical requirements</a></li>
+    <li><a href="#how-to-run-this-project">How to run this project</a></li>
     <li><a href="#documentation">Documentation</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
